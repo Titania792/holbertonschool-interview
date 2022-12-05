@@ -12,7 +12,7 @@ Write a method that determines if all the boxes can be opened.
 - The first box `boxes[0]` is unlocked
 - Return `True` if all boxes can be opened, else return `False`
 
-#### Expected output using [`main_0.py`]():
+#### Expected output using [`main_0.py`](https://github.com/Titania792/holbertonschool-interview/blob/main/0x00-lockboxes/main_0.py):
 ```
 Titania792@ubuntu:~/0x00-lockboxes$ ./main_0.py
 True

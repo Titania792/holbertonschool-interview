@@ -27,28 +27,27 @@ listint_t *insert_node(listint_t **head, int number)
 		*head = new_node;
 		return new_node;
 	}
+	if (aux->next == NULL)
+	{
+		aux->next = new_node;
+		return (new_node);
+	}
+	if (aux->n > number)
+	{
+		new_node->next = aux;
+		*head  = new_node;
+		return (new_node);
+	}
 
 	while (aux != NULL)
 	{
-		if (aux->n > number)
-		{
-			new_node->next = aux;
-			*head  = new_node;
-			return (new_node);
-		}
-		else if (aux->next->n > number)
+		if (aux->next->n > number)
 		{
 			new_node->next = aux->next;
 			aux->next = new_node;
 			return (new_node);
 		}
-		else if (aux->next == NULL)
-		{
-			aux->next = new_node;
-			return (new_node);
-		}
-		else
-			aux = aux->next;
+		aux = aux->next;
 	}
 	return (new_node);
 }
